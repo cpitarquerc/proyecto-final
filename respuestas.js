@@ -1,0 +1,6 @@
+{
+    "hola": "¡Hola! ¿En qué puedo ayudarte?",
+    "docker": "Docker es una plataforma para automatizar el despliegue de aplicaciones.",
+    "adios": "¡Hasta pronto!"
+}
+
