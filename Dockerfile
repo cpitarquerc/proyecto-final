@@ -1,18 +1,18 @@
-# Imagen base ligera de Python
+# Usamos una imagen ligera de Python
 FROM python:3.11-slim
 
-# Carpeta de trabajo dentro del contenedor
+# Establecemos el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiar archivos e instalar librerías
+# Copiamos el archivo de dependencias e instalamos
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar el resto del código
+# Copiamos el resto de los archivos (app.py y respuestas.json)
 COPY . .
 
-# Exponer el puerto de Flask
+# Exponemos el puerto donde corre Flask
 EXPOSE 5000
 
-# Comando para arrancar
+# Comando para arrancar la app
 CMD ["python", "app.py"]

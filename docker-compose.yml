@@ -1,7 +1,9 @@
 services:
   chatbot:
     build: .
+    container_name: chatbot_flask
     ports:
       - "5000:5000"
     volumes:
       - ./respuestas.json:/app/respuestas.json
+    restart: always
